@@ -1,0 +1,20 @@
+\documentclass[a4paper,12pt]{article}
+
+\input{header.tex}
+
+\begin{document}
+
+\begin{figure}[h!]
+\centering
+\input{plot.tex}
+\end{figure}
+
+\begin{longtable}{|c|c|c|c|c|c|c|}
+\hline
+$k$ & $\xi$ & $P_B$ & $P_G$ & $|P_B-P_G|$ & $f_B$ & $f_G$ \\
+\hline
+\input{result.tex}
+\hline
+\end{longtable}
+
+\end{document}
