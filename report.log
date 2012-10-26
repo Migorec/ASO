@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.9.14)  26 OCT 2012 10:48
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.9.14)  26 OCT 2012 11:33
 entering extended mode
  %&-line parsing enabled.
 **report.tex
@@ -670,11 +670,11 @@ LaTeX Info: Redefining \pageref on input line 5.
 
 \AtBeginShipoutBox=\box61
  (./plot.tex
-LaTeX Font Info:    Try loading font information for U+msa on input line 111.
+LaTeX Font Info:    Try loading font information for U+msa on input line 115.
  (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 111.
+LaTeX Font Info:    Try loading font information for U+msb on input line 115.
  (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
@@ -684,34 +684,26 @@ File: plot.pdf Graphic file (type pdf)
 Underfull \vbox (badness 10000) detected at line 38
  []
 
-[1
+) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./plot.pdf>] [2])
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 1 on input line 18.
-
-[3]
-
-Package longtable Warning: Table widths have changed. Rerun LaTeX.
-
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./plot.pdf>]
 (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 17562 strings out of 493848
- 333205 string characters out of 1152823
- 487456 words of memory out of 3000000
+ 17560 strings out of 493848
+ 333193 string characters out of 1152823
+ 442456 words of memory out of 3000000
  20453 multiletter control sequences out of 15000+50000
  9087 words of font info for 33 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 58i,8n,65p,452b,400s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 58i,8n,65p,452b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</u
 sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
 xmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/
 cm-super/sfrm1200.pfb>
-Output written on report.pdf (3 pages, 56193 bytes).
+Output written on report.pdf (1 page, 45487 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
- 5 named destinations out of 1000 (max. 500000)
+ 35 PDF objects out of 1000 (max. 8388607)
+ 3 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
