@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.9.14)  2 NOV 2012 10:49
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.9.14)  2 NOV 2012 11:00
 entering extended mode
  %&-line parsing enabled.
 **report.tex
@@ -595,7 +595,7 @@ Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
 (/usr/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
 \Fld@listcount=\count117
-))
+)
 (/usr/share/texmf-texlive/tex/latex/tools/longtable.sty
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip43
@@ -613,7 +613,7 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \c@LT@tables=\count121
 \c@LT@chunks=\count122
 \LT@p@ftn=\toks32
-) (./report.aux)
+)) (./report.aux)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -669,49 +669,48 @@ LaTeX Info: Redefining \pageref on input line 5.
 \openout4 = `report.out'.
 
 \AtBeginShipoutBox=\box61
- (./plot.tex
-LaTeX Font Info:    Try loading font information for U+msa on input line 115.
- (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+
+
+pdfTeX warning: pdflatex (file ./plot.pdf): PDF inclusion: found PDF version <1
+.5>, but at most version <1.4> allowed
+<plot.pdf, id=6, 369.38pt x 568.1225pt>
+File: plot.pdf Graphic file (type pdf)
+ <use plot.pdf>
+LaTeX Font Info:    Try loading font information for U+msa on input line 16.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 115.
- (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+LaTeX Font Info:    Try loading font information for U+msb on input line 16.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-)
-<plot.pdf, id=6, 361.35pt x 252.945pt>
-File: plot.pdf Graphic file (type pdf)
- <use plot.pdf>) (./result.tex
-Underfull \vbox (badness 10000) detected at line 38
+) (./result.tex)
+Underfull \vbox (badness 10000) detected at line 20
  []
-
-)
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 1 on input line 18.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./plot.pdf>]
-
-Package longtable Warning: Table widths have changed. Rerun LaTeX.
-
 (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 17560 strings out of 493848
- 333193 string characters out of 1152823
- 442468 words of memory out of 3000000
- 20453 multiletter control sequences out of 15000+50000
+ 17545 strings out of 493848
+ 333038 string characters out of 1152823
+ 422452 words of memory out of 3000000
+ 20441 multiletter control sequences out of 15000+50000
  9087 words of font info for 33 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 58i,8n,65p,452b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 58i,7n,65p,452b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</u
 sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
 xmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/
-cm-super/sfrm1200.pfb>
-Output written on report.pdf (1 page, 45544 bytes).
+fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/
+public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on report.pdf (1 page, 74835 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
+ 54 PDF objects out of 1000 (max. 8388607)
  3 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

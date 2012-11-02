@@ -56,17 +56,16 @@ set yrange [0:20.000000000000004] reverse
 set trange [0.001:20.000000000000004]
 unset xtics
 set x2tics nomirror rotate by -90 offset 0, graph 0.05
-set x2range [-0.5733950276507996:0.5733950276507996]
+set x2range [-0.8809852600097657:0.8809852600097657]
 set parametric
-set arrow 40 from 0,0.0 to second 0.233882623511462,  0.0 lt rgb 'blue' lw 10 nohead
-set arrow 41 from 0,0.19999999999999998 to second 0.5733950276507996,  0.19999999999999998 lt rgb 'blue' lw 10 nohead
-set arrow 42 from 0,0.7999999999999999 to second 0.3724309952619549,  0.7999999999999999 lt rgb 'blue' lw 10 nohead
-set arrow 43 from 0,1.8 to second 0.17979009820662625,  1.8 lt rgb 'blue' lw 10 nohead
-set arrow 44 from 0,3.1999999999999997 to second 6.356539881605038e-2,  3.1999999999999997 lt rgb 'blue' lw 10 nohead
-set arrow 45 from 0,5.000000000000001 to second 1.608091525085517e-2,  5.000000000000001 lt rgb 'blue' lw 10 nohead
-set arrow 46 from 0,7.2 to second 2.809220284478535e-3,  7.2 lt rgb 'blue' lw 10 nohead
-set arrow 47 from 0,9.8 to second 3.2062870473446896e-4,  9.8 lt rgb 'blue' lw 10 nohead
-set arrow 48 from 0,12.799999999999999 to second 2.1816020096914946e-5,  12.799999999999999 lt rgb 'blue' lw 10 nohead
-set arrow 49 from 0,16.2 to second 7.450580596923828e-7,  16.2 lt rgb 'blue' lw 10 nohead
-set arrow 50 from 0,20.000000000000004 to second 8.33000234328132e-9,  20.000000000000004 lt rgb 'blue' lw 10 nohead
+set arrow 40 from 0,0.0 to second 0.8809852600097657,  0.0 lt rgb 'blue' lw 10 nohead
+set arrow 41 from 0,0.19999999999999998 to second 0.5339304606119792,  0.19999999999999998 lt rgb 'blue' lw 10 nohead
+set arrow 42 from 0,0.7999999999999999 to second 0.24026870727539063,  0.7999999999999999 lt rgb 'blue' lw 10 nohead
+set arrow 43 from 0,1.8 to second 0.10561261858258932,  1.8 lt rgb 'blue' lw 10 nohead
+set arrow 44 from 0,3.1999999999999997 to second 4.1071573893229144e-2,  3.1999999999999997 lt rgb 'blue' lw 10 nohead
+set arrow 45 from 0,5.000000000000001 to second 1.344160600142046e-2,  5.000000000000001 lt rgb 'blue' lw 10 nohead
+set arrow 46 from 0,7.2 to second 3.5542708176832926e-3,  7.2 lt rgb 'blue' lw 10 nohead
+set arrow 47 from 0,9.8 to second 7.247924804687504e-4,  9.8 lt rgb 'blue' lw 10 nohead
+set arrow 48 from 0,12.799999999999999 to second 1.0658712948069852e-4,  12.799999999999999 lt rgb 'blue' lw 10 nohead
+set arrow 49 from 0,16.2 to second 1.003867701480262e-5,  16.2 lt rgb 'blue' lw 10 nohead
 plot  t, t*t with lines notitle, 1/sqrt(2*pi*t)*exp(-t/2), t with lines notitle axes x2y1 lw 10, "data2.dat" using 2:1 with points notitle axe x2y1 lw 10

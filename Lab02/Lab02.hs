@@ -8,15 +8,19 @@ import Text.Printf
 import System.Cmd
 import System.Environment
 import Data.Ratio
-
+import Data.List (inits)
 
 main = do [p, n] <- getArgs
           lab01 (read p) (read n)
 
 lab01 :: Double -> Integer -> IO ()
-lab01 p n = do  writeFile "data1.dat" $ unlines ("#K\tXi\tPB\tPG":toData1)
+lab01 p n = do  print fXis 
+                writeFile "data1.dat" $ unlines ("#K\tXi\tPB\tPG":toData1)
                 writeFile "data2.dat" $ unlines ("#K\tXi\tPB\tPG":toData2)
+                writeFile "result.tex" $ unlines $ intersperse "\\hline" toTex
                 writeFile "plot1.gp" $ unlines toGp
+                _ <- system "gnuplot plot1.gp && pdflatex report.tex"
+                return ()
     where
         q = 1 - p
         rp = approxRational p 0.0000001
@@ -38,9 +42,22 @@ lab01 p n = do  writeFile "data1.dat" $ unlines ("#K\tXi\tPB\tPG":toData1)
         pXis' = map (\(pb,xi) -> 2* pb) $ filter (\(_,xi) -> xi >= 0) $ zip pBs xis
         pXis = (head pXis' / 2) : (tail pXis')
         
-        fXis = map (\p -> p * sqrt (fn*p*q)) pXis
+        fXis = map (\(p,xi1,xi2) -> p / (xi2-xi1)) $ zip3 pXis xi2s $ tail xi2s
+        fFXis = map sum $ tail $ inits $ tail fXis
+        
+        fGs = map (\x -> 1 / (sqrt (2*pi*x)) * exp (-x/2 )) xi2s
+        
+        (_,_,fFGs) = foldl (\(a,s,l) b -> let s1 = fromJust $ quadRes $ quadRomberg defQuad (a,b) (\x -> 1 / (sqrt (2*pi*x)) * exp (-x/2))
+                                    in (b,s+s1,l++[s+s1] )) (0.001, 0, []) $ tail xi2s
+        
         toData1 = zipWith3 (\xi pB fB -> show xi ++ "\t" ++ show pB ++ "\t" ++ show fB) xis pBs fBs
         toData2 = zipWith (\xi2 pXi-> show xi2 ++ "\t" ++ show pXi) xi2s fXis
+        toTex = zipWith5 (\xi2 fXi fG fFXi fFG -> printf "%.2f" xi2 ++ " & " ++
+                                                  printf "%.4e" fXi ++ " & " ++
+                                                  printf "%.4e" fG ++ " & " ++
+                                                  printf "%.4e" fFXi ++ " & " ++
+                                                  printf "%.4e" fFG ++ " & " ++
+                                                  printf "%.4e" (abs (fFG - fFXi)) ++ " \\\\") xi2s fXis fGs fFXis ((0/0):fFGs)
         toGp = ["set terminal pdf  size 13cm,20cm",
                 "set output \"plot.pdf\"",
                 "set multiplot layout 2, 1",
