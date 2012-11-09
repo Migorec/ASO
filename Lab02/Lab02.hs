@@ -14,7 +14,10 @@ main = do [p, n] <- getArgs
           lab01 (read p) (read n)
 
 lab01 :: Double -> Integer -> IO ()
-lab01 p n = do  print fXis 
+lab01 p n = do  print $ length xi2s 
+                print $ length fXis 
+                print $ length fGs
+                print $ length fFXis
                 writeFile "data1.dat" $ unlines ("#K\tXi\tPB\tPG":toData1)
                 writeFile "data2.dat" $ unlines ("#K\tXi\tPB\tPG":toData2)
                 writeFile "result.tex" $ unlines $ intersperse "\\hline" toTex
@@ -42,8 +45,8 @@ lab01 p n = do  print fXis
         pXis' = map (\(pb,xi) -> 2* pb) $ filter (\(_,xi) -> xi >= 0) $ zip pBs xis
         pXis = (head pXis' / 2) : (tail pXis')
         
-        fXis = map (\(p,xi1,xi2) -> p / (xi2-xi1)) $ zip3 pXis xi2s $ tail xi2s
-        fFXis = map sum $ tail $ inits $ tail fXis
+        fXis = map (\(p,xi1,xi2) -> p / (xi2-xi1)) $ zip3 pXis (xi2s) $ tail xi2s
+        fFXis = map sum $ tail $ inits fXis
         
         fGs = map (\x -> 1 / (sqrt (2*pi*x)) * exp (-x/2 )) xi2s
         
