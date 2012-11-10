@@ -1,0 +1,23 @@
+\documentclass[a4paper,12pt]{article}
+
+\input{header.tex}
+\usepackage{epstopdf}
+
+\begin{document}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[angle=-45, width = \textwidth]{plot.png}
+\end{figure}
+
+
+
+\begin{longtable}{|c|c|c|c|c|c|c|}
+\hline
+$\chi$ & $f_B$ & $f_G$ & $|f_B - f_G|$ & $F_B$ & $F_G$ & $|F_B-F_G|$ \\
+\hline
+\input{table.tex}
+\hline
+\end{longtable}
+
+\end{document}
